@@ -3,16 +3,19 @@
  */
 
 var React = require('react');
-var AppActions = require('../actions/app-actions');
 var Catalog = require('./catalog');
+var Cart = require('./cart');
 
 var App = React.createClass({
 
     render: function() {
         return (
             <div>
-                <p className="center">Product Catalog: </p>
+                <b>Product Catalog: </b>
                 <Catalog />
+                <br />
+                <b>Cart: </b>
+                <Cart />
             </div>
         )
     }

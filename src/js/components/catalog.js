@@ -5,9 +5,10 @@ var React = require('react');
 var AppStore = require('../stores/app-store');
 var AddToCart = require('./add-to-cart');
 
-var catalog = React.createClass({
+var Catalog = React.createClass({
+
     getInitialState: function() {
-        return { items: AppStore.getCatalog() }
+        return { items: AppStore.getCatalog() };
     },
 
     render: function() {
@@ -20,12 +21,20 @@ var catalog = React.createClass({
                 </tr>
             );
         });
+
         return (
             <table className="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
                 {items}
             </table>
         );
     }
 });
 
-module.exports = catalog;
+module.exports = Catalog;

@@ -6,6 +6,7 @@ var React = require('react');
 var AppActions = require('../actions/app-actions');
 
 var IncreaseItem = React.createClass({
+
     handleClick: function() {
         AppActions.increaseItem(this.props.index);
     },

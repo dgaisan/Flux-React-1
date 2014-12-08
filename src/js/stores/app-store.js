@@ -34,6 +34,8 @@ function _decreaseItem(index) {
 }
 
 function _addItem(item) {
+    console.log('AppStore: addItem', item);
+
     if (!item.inCart) {
         item[ 'qty'] = 1;
         item[ 'inCart'] = true;
@@ -77,10 +79,12 @@ var AppStore = assign({}, EventEmitter.prototype, {
  });
 
 AppStore.dispatcherIndex = AppDispatcher.register(function(payload) {
-    console.log(payload);
+    console.log('dispatcherIndex');
+    console.log('payload: ', payload);
+
     var action = payload.action;
 
-    switch(action.type) {
+    switch(action.actionType) {
         case AppConstants.ADD_ITEM:
             _addItem(action.item);
             break;
