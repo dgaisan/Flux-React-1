@@ -4,14 +4,16 @@
 
 var React = require('react');
 var AppActions = require('../actions/app-actions');
+var Catalog = require('./catalog');
 
 var App = React.createClass({
-    handleClick: function() {
-        AppActions.addItem('Adding this item');
-    },
+
     render: function() {
         return (
-            <h1 onClick={this.handleClick}> My App XXX</h1>
+            <div>
+                <p className="center">Product Catalog: </p>
+                <Catalog />
+            </div>
         )
     }
 });
