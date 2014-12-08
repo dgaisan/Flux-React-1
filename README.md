@@ -4,3 +4,8 @@ Flux-React-1
 Simple React Shopping Cart on Flux
 
 This App explores React.js and Flux Architecture pattern.
+
+In order to build project do the following steps:
+ - npm install (to download project's dependencies; you will need npm installed on your local machine: https://www.npmjs.org/doc/README.html)
+ - gulp (to build project; you need to install gulp: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+ After running gulp look for /dist folder that will contain the app (index.html)
